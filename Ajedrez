@@ -1,0 +1,31 @@
+$blanco = "____";
+$negro = "███";
+$x = 8; $rojos = 0;
+$y = 8; $azules = 0;
+echo "<table border = 1>";
+for ($i = 1; $i <= $x; $i++) {
+  echo "<tr>";
+  for ($j = 1; $j <= $y; $j++) {
+    if ($i % 2 == 0) {
+      if ($j % 2 == 0) {
+        echo "<td>$blanco</td>";
+        $azules++;
+      } else {
+        echo "<td>$negro</td>";
+        $rojos++;
+      }
+    } else {
+      if ($j % 2 == 0) {
+        echo "<td>$negro</td>";
+        $rojos++;
+      } else {
+        echo "<td>$blanco</td>";
+        $azules++;
+      }
+    }
+  }
+  echo "</tr>";
+}
+echo "</table>";
+echo "La cantidad de Rojos es: ".$rojos."<br>";
+echo "La cantidad de Azules es: ".$azules."<br>";
